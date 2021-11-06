@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Take in input of 1) Amount, 2) Use, 3) Time -->
+
+    <!-- Creating a table -->
+    <table>
+
+        <!-- Table head -->
+        <thead>
+
+            <!-- First row specifies -->
+            <tr>
+                <th>
+                    Amount
+                </th>
+                <th>
+                    Use
+                </th>
+                <th>
+                    Date
+                </th>
+            </tr>
+        </thead>
+
+        <!-- Specifies the data -->
+        <tbody name = "row">
+            <div>
+                <td>
+                    <input type="text">
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </div>   
+        </tbody>
+    </table>
+    <input type="button" value="Add Row" onclick="AddELement()">
+
+    <script>
+        function AddElement()
+        {
+            let row = document.getElementsByName('row');
+        }
+    </script>
+</body>
+</html>
