@@ -5,47 +5,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 <body>
-    <form action="." method="post">
-
-        <div>
-            <h3>Enter your details: </h3>
-        </div>
-        <div>
-            <p>First Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name = "FirstName" ></p>
-        </div>
-        <div>
-            <p>Last Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name = "LastName" ></p>
-        </div>
-        <div>
-            <p>Mail Id: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name = "MailId" ></p>
-        </div>
-        <div>
-            <p>Phone no: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name = "PhoneNo"> </p>
-        </div>
-        <div>
-            <p>Age: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name = "Age" ></p>
-         </p>
-        </div>
-        <div>
-            <p>Gender: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio"  name="Gender" value="Male">
-                <label for="Male">Male</label>
-                <input type="radio"  name="Gender" value="Female">
-                <label for="Female">Female</label><br>
-            </p>
-            
-        </div>
-        <div>
-            <p>Password: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="Password"></p>
-        </div>
-        <div>
-            <p>Confirm Password:<input type="password" name="ConfirmPassword"></p>
-        </div>
-        <div>
-            <p><input type="Submit" value = "Submit"></p>
-        </div>
-    </form>
+    <table>
+        <form action="." method="post">
+            <thead>
+                <th><p>Enter your details</p></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        First Name:
+                    </td>
+                    <td>
+                        <input type="text" name="FirstName">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Last Name:
+                    </td>
+                    <td>
+                        <input type="text" name="LastName">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        MailId:
+                    </td>
+                    <td>
+                        <input type="text" name="MailId">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        PhoneNo:
+                    </td>
+                    <td>
+                        <input type="text" name="PhoneNo">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Age:
+                    </td>
+                    <td>
+                        <input type="date" name="Age">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Gender:
+                    </td>
+                    <td>
+                        <input type="radio" id="html" name="Male" value="Male">
+                        <label for="html">Male</label><br>
+                        <input type="radio" id="css" name="Female" value="Female">
+                        <label for="css">Female</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        UserName:
+                    </td>
+                    <td>
+                        <input type="text" name="UserName">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        password:
+                    </td>
+                    <td>
+                        <input type="text" name="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        confirm_password:
+                    </td>
+                    <td>
+                        <input type="text" name="confirm_password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+            </tbody>
+        </form>
+    </table>
 
 </body>
 </html>
