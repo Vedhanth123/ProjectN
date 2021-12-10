@@ -7,9 +7,21 @@
         <title>Transaction_form</title>
     </head>
     <body>
-        <!-- Take in input of 1) Amount, 2) Use, 3) Time -->
+    
+        <div align = 'center'>
+            {% for x in Transactions %}
+
+                <div>
+                    {% for y in x %}
+                        
+                        {{ y }}
+                    
+                    {% endfor %}
+                </div>
+
+            {% endfor %}
+        </div>
         
-        <!-- Create a table -->
     <div align = 'center'>
     
         <table id="Transaction_table">
@@ -49,51 +61,23 @@
                             </td>
                         </div>
                     </tr>
-                    
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+                            <div align="center">
+                                <input type="submit" value=Submit>
+                            </div>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
                 </tbody>
-                <div align="center">
-                    <input type="submit" value=Submit>
-                </div>
             </form>
         </table>
     
-        <input type="button" value = "Add Row" onclick="addRow()">
     </div>
-    
-    <script>
-
-        function Submit()
-        {
-            // fetch HTML data from form to javascript
-        }
-        function addRow()
-        {
-            // accessing table and storing it in javascript object
-            var table = document.getElementById('Transaction_table');
-
-            if(table!= null)
-            {
-                console.log("Table created");
-
-                // creating a row 
-                var row = table.insertRow(-1);
-
-                // inserting cells
-                var cell1 = row.insertCell();
-                var cell2 = row.insertCell();
-                var cell3 = row.insertCell();
-
-                // adding HTML code to cells in table
-                cell1.innerHTML = '<input type="text" name="Amount">'
-                cell2.innerHTML = '<input type="text" name="Use">'
-                cell3.innerHTML = '<input type="text" name="Time">'
-            }
-
-            else
-            {
-                console.log("Table not created");
-            }
-        }
-    </script>
 </body>
 </html>

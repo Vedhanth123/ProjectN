@@ -1,6 +1,6 @@
 # Enter the data into the HTML form
 
-from flask import Flask, render_template, request
+from flask import Flask, redirect, render_template, request, url_for
 import mysql.connector
 
 # creating an object to host web app using flask api
@@ -45,28 +45,40 @@ mycursor = mysql.cursor()
       
 #    return render_template("User_input.html")
 
+'''
+   This line takes transactions from user, stores them in a database and displays them which
+   transactions they have done on that page itself
+'''
+Transactions = []
+Rows = []
 @app.route('/',methods=['GET','POST'])
 def Inputting_transactions():
 
-   # create a html page which take transactions in the form of a table
+   # storing sql command in variable
+   sql = "INSERT INTO transactions(Amount, TUse, DTime) VALUES(%s, %s, %s)"
 
-   # New row is added in the table if user clicks on add more button
-   # THis functionality is accomplished by using javascript in html code to add new rows in a table using javascript event handling concept.
+   # checking if user wants to view the website for the first time
+   if request.method == "GET":
 
-   if request.method == "POST":
+      # rendering the template
+      return render_template("Transaction_form_using_table.html", Transactions=Transactions)
 
-      print("")
-      print("Transaction data: ")
-      print("")
-      for x in request.form:
-         print(request.form[x], end=":")
-         print(type(request.form[x]))
+   # fetching data from html and storing it in a variable
+   Rows = []
+   for x in request.form:
+      Rows.append(str(request.form[x]))
+   
+   Transactions.append(Rows)
+   # Typecasting Rows list to tuple
+   Rows = tuple(Rows)
 
-         
-         
-   else:
-      return render_template("Transaction_form_using_table.html")
+   # executing mysql command
+   mycursor.execute(sql, Rows)
+   mysql.commit()
 
-   pass
+   # reopening the website again
+   return redirect(url_for("Inputting_transactions"))
+
+
 if __name__ == '__main__':
    app.run(host='localhost', port=8080, debug=True)
