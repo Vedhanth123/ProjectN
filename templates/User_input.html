@@ -4,99 +4,130 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign Up</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
 
 </head>
 <body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Ledger</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#"Sign up</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="http://neha0077.pythonanywhere.com/Transactions">Add Transactions</a></li>
+            <li><a href="#">Illustrate</a></li>
+          </ul>
+        </div>
+    </nav>
+
+    <div class="container">
     <table>
-        <form action="." method="post">
+        <form action="http://neha0077.pythonanywhere.com/SignUp" method="post">
             <thead>
                 <th><p>Enter your details</p></th>
             </thead>
             <tbody>
                 <tr>
-                    <td>
-                        First Name:
-                    </td>
-                    <td>
-                        <input type="text" name="FirstName">
-                    </td>
+                    <div class="form-group">
+                        <td>
+                            First Name:
+                        </td>
+                        <td>
+                            <input type="text" name="FirstName" class="form-control">
+                        </td>
+                    </div>
                 </tr>
                 <tr>
-                    <td>
-                        Last Name:
-                    </td>
-                    <td>
-                        <input type="text" name="LastName">
-                    </td>
+                    <div class="form-group">
+                        <td>
+                            Last Name:
+                        </td>
+                        <td>
+                            <input type="text" name="LastName" class="form-control">
+                        </td>
+                    </div>
                 </tr>
                 <tr>
-                    <td>
-                        MailId:
-                    </td>
-                    <td>
-                        <input type="text" name="MailId">
-                    </td>
+                    <div class="form-group">
+                        <td>
+                            MailId:
+                        </td>
+                        <td>
+                            <input type="text" name="MailId" class="form-control">
+                        </td>
+                    </div>
                 </tr>
                 <tr>
-                    <td>
-                        PhoneNo:
-                    </td>
-                    <td>
-                        <input type="text" name="PhoneNo">
-                    </td>
+                    <div class="form-group">
+                        <td>
+                            PhoneNo:
+                        </td>
+                        <td>
+                            <input type="text" name="PhoneNo" class="form-control">
+                        </td>
+                    </div>
                 </tr>
                 <tr>
-                    <td>
-                        Age:
-                    </td>
-                    <td>
-                        <input type="date" name="Age">
-                    </td>
+                    <div class="form-group">
+                        <td>
+                            Age:
+                        </td>
+                        <td>
+                            <input type="date" name="Age" class="form-control">
+                        </td>
+                    </div>
                 </tr>
                 <tr>
-                    <td>
-                        Gender:
-                    </td>
-                    <td>
-                        <input type="radio" id="html" name="Male" value="Male">
-                        <label for="html">Male</label><br>
-                        <input type="radio" id="css" name="Female" value="Female">
-                        <label for="css">Female</label><br>
-                    </td>
+                    <div class="form-group">
+                        <td>
+                            Gender:
+                        </td>
+                        <td>
+                            <input type="radio" id="html" name="Male" value="Male" class='form-control'>
+                            <label for="html">Male</label><br>
+                            <input type="radio" id="css" name="Female" value="Female" class='form-control'>
+                            <label for="css">Female</label><br>
+                        </td>
+                    </div>
                 </tr>
                 <tr>
-                    <td>
-                        UserName:
-                    </td>
-                    <td>
-                        <input type="text" name="UserName">
-                    </td>
+                    <div class="form-group">
+                        <td>
+                            UserName:
+                        </td>
+                        <td>
+                            <input type="text" name="UserName" class="form-control">
+                        </td>
+                    </div>
                 </tr>
                 <tr>
-                    <td>
-                        password:
-                    </td>
-                    <td>
-                        <input type="text" name="password">
-                    </td>
+                    <div class="form-group">
+                        <td>
+                            password:
+                        </td>
+                        <td>
+                            <input type="password" name="password" class="form-control">
+                        </td>
+                    </div>
                 </tr>
                 <tr>
-                    <td>
-                        confirm_password:
-                    </td>
-                    <td>
-                        <input type="text" name="confirm_password">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="submit" value="Submit">
-                    </td>
+                    <div class="form-group">
+                        <td>
+                            <input type="submit" value="Submit" class="btn btn-primary">
+                        </td>
+                    </div>
                 </tr>
             </tbody>
         </form>
     </table>
-
+    </div>
 </body>
 </html>
