@@ -5,31 +5,19 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Transaction_form</title>
+
+        <title>Bootstrap Vertical Form</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    
     </head>
     <body>
-    
-        <div align = 'center'>
-            {% for x in Transactions %}
-
-                <div>
-                    {% for y in x %}
-                        
-                        {{ y }}
-                    
-                    {% endfor %}
-                </div>
-
-            {% endfor %}
-        </div>
         
-    <div align = 'center'>
-    
-        <table id="Transaction_table">
-            
-            <!-- Create a form -->
-            <form action="." method="post">
-                
-                    <!-- Create a first table head -->
+        <h3 class='container'>Your Transactions will appear here:</h3>
+
+        <div class='container'>
+            <table>
                 <thead>
                     <th>
                         Amount
@@ -41,23 +29,63 @@
                         Time
                     </th>
                 </thead>
+                <tbody>
+                    {% for x in Transactions %}
+                    <tr>
+                        <div>
+                            {% for y in x %}
+                            
+                                <td>
+                                    {{ y }}
+                                </td>
+                                
+                            {% endfor %}
+                        </div>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+    
+            </table>
+        </div>
+        
+    <div class='container'>
+    
+        <table id="Transaction_table">
+            
+            <!-- Create a form -->
+            <form action="." method="post">
+                
+                    <!-- Create a first table head -->
+                <thead>
+                    <div class="form-group">
+                        <th>
+                            Amount
+                        </th>
+                        <th>
+                            Use
+                        </th>
+                        <th>
+                            Date
+                        </th>
+                    </div>
+                </thead>
                 
                 <tbody>
                     <!-- Creating a row which contains inputs of these headings -->
                     <tr>
-                        <div>
+                        <div class="form-group">
                             <td>
-                                <input type="text" name = "Amount">
+                                <input type="text" name = "Amount" class="form-control">
                             </td>
                         </div>
-                        <div>
+                        <div class="form-group">
                             <td>
-                                <input type="text" name = "Use">
+                                <input type="text" name = "Use" class="form-control">
                             </td>
                         </div>
-                        <div>
+                        <div class="form-group">
                             <td>
-                                <input type="text" name = "Time">
+                                <input type="date" name = "Time" class="form-controls">
                             </td>
                         </div>
                     </tr>
@@ -66,8 +94,8 @@
 
                         </td>
                         <td>
-                            <div align="center">
-                                <input type="submit" value=Submit>
+                            <div class="form-group">
+                                <input type="submit" value=Submit class="form-controls">
                             </div>
                         </td>
                         <td>
