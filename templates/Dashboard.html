@@ -8,11 +8,28 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+      .container-v
+      {
+          float:left;
+          padding: 1pc;
+          width:33.33%;
+        };
+      
+      .container-I
+      {
+        width: 1px;
+        height: 1px;
+      }
+    </style>
 </head>
 <body>
     
+  <!-- Creating a navigation bar for  -->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
+
           <div class="navbar-header">
             <a class="navbar-brand" href="#">Ledger</a>
           </div>
@@ -23,6 +40,40 @@
             <li><a href="#">Illustrate</a></li>
           </ul>
         </div>
+        
+        <!-- Displaying current user signed in -->
+        <div class="container" align="right" style="color: rgb(62, 182, 46); font-weight: bold;">Signed in as: Vedhanth</div>
       </nav>
+
+    <!-- This is main container TO show  -->
+    <div class="container" align="center" style="color:rgb(68, 157, 216); font-size: 4ch;">
+      Welcome back Neha!
+    </div>
+
+    <div class="container">
+
+      <!-- This is to display pie chart -->
+      <div class="container-v" >
+        Look into your pie chart
+        <div class="container-I">
+          <img class="images" src="Pictures/pie-chart-example-1.png" alt="">
+        </div>
+      </div>
+  
+      <!-- This is to display previous transactions -->
+      <div class="container-v">
+        Look into your previous transactions
+
+        <div class="container-I">
+          <img class = "images" src="Pictures/imgbin-computer-icons-spreadsheet-microsoft-excel-gnome-S06QKNi0hEQEes9zfEF9XGHSL.jpg"alt="">
+        </div>
+      </div>
+  
+      <!-- This is to display budget management analysis -->
+      <div class="container-v">
+        Manage your budget
+      </div>
+      
+    </div>
 </body>
 </html>
